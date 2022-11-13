@@ -9,12 +9,12 @@ import whitehouse from '../images/whitehouse.png';
 import doorbell from '../images/doorbell.png';
 
 function Home() {
-    const [origin, setOrigin] = useState("");
+    const [ideal, setIdeal] = useState("");
     const [destination, setDestination] = useState("");
+    const [radius, setRadius] = useState("");
     
     const handleSubmit = (evt: React.FormEvent<HTMLElement>) => {
         evt.preventDefault();
-        //alert(`Submitting Name "${origin}", "${destination}"`)
     }
 
     return (
@@ -31,14 +31,18 @@ function Home() {
         <form onSubmit={handleSubmit} className="flex flex-col items-center">
           <input
             className="h-14 bg-[#ECEFF4] text-center mt-8 text-3xl rounded-md border-[1px] border-[#434C5E] placeholder:text-2xl"
-            placeholder="enter your location"
-            onChange={(e) => setOrigin(e.target.value)}/>
+            placeholder="enter your ideal city"
+            onChange={(e) => setIdeal(e.target.value)}/>
+          <input
+            className="h-14 bg-[#ECEFF4] text-center mt-8 text-3xl rounded-md border-[1px] border-[#434C5E] placeholder:text-2xl"
+            placeholder="how far can it be?"
+            onChange={(e) => setRadius(e.target.value)}/>
           <input
             className="h-14 bg-[#ECEFF4] text-center mt-8 mb-8 text-3xl rounded-md border-[1px] border-[#434C5E] placeholder:text-2xl"
             placeholder="search for metro area"
             onChange={(e) => setDestination(e.target.value)}/>
         
-            <Link to={`/results/:${origin}/:${destination}`}>
+            <Link to={`/results/:${ideal}/:${destination}/:${radius}`}>
                 <div className="bg-knock-blue p-2 rounded-lg">
                     <img alt="choose yours" src={whitehouse} className="w-14 h-14"/>
                 </div>

@@ -1,5 +1,6 @@
 import React from 'react';
 import Home from './components/Home';
+import Detail from './components/Detail';
 import Results from './components/Results'
 
 import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
@@ -13,8 +14,12 @@ function App() {
             element={<Home/>}>
         </Route>
         <Route
-            path="/results/:origin/:destination"
+            path="/results/:ideal/:destination/:radius"
             element={<Results/>}>
+        </Route>
+        <Route
+            path="/detail/:zipcode"
+            element={<Detail/>}>
         </Route>
       </Routes>
     </Router>
