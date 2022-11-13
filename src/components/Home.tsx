@@ -1,4 +1,4 @@
-import waves1 from '../waves1.svg';
+import waves1 from '../images/waves1.svg';
 
 function Home() {
     return (
@@ -8,11 +8,11 @@ function Home() {
             knock knock
           </div>
         </div>
-        <h1 className="italic text-[#434C5E] text-lg">
+        <h1 className="italic text-[#434C5E] text-lg mb-8">
           find your new neighborhood
         </h1>
         <div className="">
-          <input className="h-14 bg-[#ECEFF4] text-center mt-8 text-3xl rounded-md border-[1px] border-[#434C5E] placeholder:text-2xl" placeholder="search for metro area">
+          <input className="h-14 bg-light-container text-center text-3xl rounded-md border-[1px] border-[#434C5E] placeholder:text-2xl" placeholder="search for metro area">
           </input>
           <button></button>
         </div>
