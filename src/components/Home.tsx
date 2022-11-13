@@ -6,7 +6,6 @@ import {
 } from "react-router-dom";
 import waves1 from '../images/waves1.svg';
 import whitehouse from '../images/whitehouse.png';
-import doorbell from '../images/doorbell.png';
 
 function Home() {
     const [origin, setOrigin] = useState("");
