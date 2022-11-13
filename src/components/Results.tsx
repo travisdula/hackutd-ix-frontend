@@ -21,9 +21,7 @@ function Results() {
 
             <h1 className="italic text-[#434C5E] text-lg mb-8">find your new neighborhood</h1>
 
-            <div>
-                {results.sort((a:any,b:any) => b[2] - a[2]).map((x: Array<any>) => (<CityContainer key={x[0]} zipCode={x[0]} city={x[1]} score={x[2]*100}/>))}
-            </div>
+            {results.sort((a:any,b:any) => b[2] - a[2]).map((x: Array<any>) => (<CityContainer key={x[0]} zipCode={x[0]} city={x[1]} score={x[2]*100}/>))}
 
             <img alt="waves" src={waves2} className="z-0 fixed bottom-0"/>
       </div>
