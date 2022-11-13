@@ -17,7 +17,7 @@ function Home() {
             knock knock
           </div>
         </div>
-        <h1 className="italic text-[#434C5E] text-lg">
+        <h1 className="italic text-[#434C5E] text-lg mb-8">
           find your new neighborhood
         </h1>
         <div className="">
@@ -32,7 +32,6 @@ function Home() {
               onChange={(e) => setDestination(e.target.value)}/>
           <button className="mt-4 bg-[#f48ead] text-xl w-1/3 rounded-lg" type="submit"> find yours </button>
           </form>
-          <button></button>
         </div>
         <img src={waves1} className="absolute inset-x-0 bottom-0"/>
       </div>
