@@ -19,8 +19,8 @@ function App() {
             element={<Results/>}>
         </Route>
         <Route
-            path="/detail/:zipcode"
-            element={<Detail/>}>
+            path="/details/:origin/:destination/:zipCode"
+            element={<Details/>}>
         </Route>
       </Routes>
     </Router>
