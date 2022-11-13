@@ -4,7 +4,7 @@ import {
   Route,
   Link,
 } from "react-router-dom";
-import waves1 from '../waves1.svg';
+import waves1 from '../images/waves1.svg';
 
 function Home() {
     const [origin, setOrigin] = useState("");
