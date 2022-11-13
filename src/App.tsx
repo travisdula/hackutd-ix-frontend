@@ -1,24 +1,24 @@
 import React from 'react';
 import logo from './logo.svg';
-import './App.css';
+import waves1 from './waves1.svg';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+    <div className="min-h-screen bg-light-blue place-self-center flex flex-col items-center">
+      <div className="bg-[#475790] w-fit mt-20 mb-2 rounded-md">
+        <div className="text-[45px] font-extrabold mx-4 text-[#EEF4FF]">
+          knock knock
+        </div>
+      </div>
+      <h1 className="italic text-[#434C5E] text-lg">
+        find your new neighborhood
+      </h1>
+      <input className="h-14 bg-[#ECEFF4] text-center mt-8 text-3xl rounded-md border-[1px] border-[#434C5E] placeholder:text-2xl" placeholder="search for metro area">
+      </input>
+      <img src={waves1} className="absolute inset-x-0 bottom-0"/>
+
+    </div>
     </div>
   );
 }
