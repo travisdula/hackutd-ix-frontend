@@ -5,6 +5,7 @@ import {
   Link,
 } from "react-router-dom";
 import waves1 from '../images/waves1.svg';
+import whitehouse from '../images/whitehouse.png';
 
 function Home() {
     const [origin, setOrigin] = useState("");
@@ -35,12 +36,13 @@ function Home() {
             className="h-14 bg-[#ECEFF4] text-center mt-8 text-3xl rounded-md border-[1px] border-[#434C5E] placeholder:text-2xl"
             placeholder="search for metro area"
             onChange={(e) => setDestination(e.target.value)}/>
-        <button className="mt-4 bg-[#f48ead] text-xl w-1/3 rounded-lg" type="submit">
-            <Link to={`/results/:${origin}/:${destination}`}  >find yours </Link>
-        </button>
+        <Link
+            to={`/results/:${origin}/:${destination}`}>
+            <img alt="choose yours" src={whitehouse} className="mt-6 w-20"/>
+        </Link>
         </form>
       </div>
-      <img src={waves1} className="absolute inset-x-0 bottom-0"/>
+      <img alt="" src={waves1} className="absolute inset-x-0 bottom-0"/>
     </div>
     )
 }
