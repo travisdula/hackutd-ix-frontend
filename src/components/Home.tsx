@@ -1,6 +1,15 @@
+import React, { useState } from 'react';
 import waves1 from '../waves1.svg';
 
 function Home() {
+    const [origin, setOrigin] = useState("");
+    const [destination, setDestination] = useState("");
+    
+    const handleSubmit = (evt: React.FormEvent<HTMLElement>) => {
+        evt.preventDefault();
+        alert(`Submitting Name "${origin}", "${destination}"`)
+    }
+
     return (
         <div className="min-h-screen bg-light-blue place-self-center flex flex-col items-center">
         <div className="bg-[#475790] w-fit mt-20 mb-2 rounded-md">
@@ -12,8 +21,17 @@ function Home() {
           find your new neighborhood
         </h1>
         <div className="">
-          <input className="h-14 bg-[#ECEFF4] text-center mt-8 text-3xl rounded-md border-[1px] border-[#434C5E] placeholder:text-2xl" placeholder="search for metro area">
-          </input>
+          <form onSubmit={handleSubmit} className="flex flex-col items-center">
+            <input
+              className="h-14 bg-[#ECEFF4] text-center mt-8 text-3xl rounded-md border-[1px] border-[#434C5E] placeholder:text-2xl"
+              placeholder="enter your location"
+              onChange={(e) => setOrigin(e.target.value)}/>
+            <input
+              className="h-14 bg-[#ECEFF4] text-center mt-8 text-3xl rounded-md border-[1px] border-[#434C5E] placeholder:text-2xl"
+              placeholder="search for metro area"
+              onChange={(e) => setDestination(e.target.value)}/>
+          <button className="mt-4 bg-[#f48ead] text-xl w-1/3 rounded-lg" type="submit"> find yours </button>
+          </form>
           <button></button>
         </div>
         <img src={waves1} className="absolute inset-x-0 bottom-0"/>
