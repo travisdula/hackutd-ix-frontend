@@ -9,6 +9,7 @@ module.exports = {
         'med-wave-blue': '#626E87',
         'light-wave-blue': '#8393CD',
         'light-container': '#ECEFF4',
+        'knock-blue': '#475790',
       },
       fontFamily: {
         'sans': ["Inter"],
